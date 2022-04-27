@@ -1,0 +1,78 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    background-image: linear-gradient(to bottom right, rgb(44, 206, 255, 0.5), rgb(0, 255, 42, .7));
+}
+
+#main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#header {
+    display: flex;
+    justify-content: space-around;
+    font-size: 50px;
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+    color: rgb(0, 0, 0, .7);
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: max-content;
+    margin-bottom: 30px;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    width: 300px;
+}
+
+#colorBox {
+    display: flex;
+    justify-content: space-evenly;
+    min-width: 300px;
+}
+
+button:hover, input:hover {
+    box-shadow: rgba(83, 203, 255, 0.5) 0px 2px 4px 0px, rgba(9, 174, 245, 0.5) 0px 2px 16px 0px;
+}
+
+button {
+    padding: 5px;
+}
+
+#draw { 
+    display: grid;
+    border: 10px solid rgb(173, 171, 171);
+    border-style: outset;
+    height: 500px;
+    width: 500px;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    background-color: black;
+}
+
+.grids {
+    height: auto;
+    width: auto;
+}
+
+/* .grids:hover {
+    background-color: white;
+} */
