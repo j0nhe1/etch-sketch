@@ -14,7 +14,7 @@ for (let i = 0; i < 400; i++) {
 
 //slider and pixel listener
 slider.addEventListener('input', editCanvas);
-colorPick.addEventListener('input', clearRand)
+colorPick.addEventListener('input', clearRand);
 colorbtn.addEventListener('click', randomColor);
 square.addEventListener('mouseover', sketch);
 btn.addEventListener('click', clear);
@@ -31,7 +31,7 @@ function editCanvas() {
 
     //sets new sketchpad based on slider value
     let num = slider.value;
-    let numsq = Math.pow(slider.value, 2);
+    let numsq = Math.pow(num, 2);
     draw.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
     draw.style.gridTemplateRows = `repeat(${num}, 1fr)`;
     for (let i = 0; i < numsq; i++) {
@@ -39,7 +39,6 @@ function editCanvas() {
         grids.classList.add("grids");
         draw.appendChild(grids);
     }
-    console.log(numsq)
 }
 
 //changes the color of the pixels
@@ -51,9 +50,9 @@ function sketch(e) {
     if (e.target.classList.contains("random")) {
         e.target.style.backgroundColor = `rgb(${randA}, ${randB}, ${randC})`;
     } else if (e.target.classList.contains("grids")) {
-        e.target.style.backgroundColor = "white";
         e.target.style.backgroundColor = `${color}`;
     }  
+console.log(color);
 }
 
 //clears sketchpad
